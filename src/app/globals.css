@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @source not "../../*.md";
+@source not "../assets/*.svg";
 
 @theme {
   --font-sans: var(--font-kumbh-sans), ui-sans-serif, system-ui, sans-serif;
@@ -23,4 +24,67 @@
   --radius-card: 0.9375rem;
 
   --shadow-card: 0 50px 100px -20px rgb(8 70 94 / 0.5);
+
+  --animate-settle: settle 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-pop: pop 600ms 150ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-count: count 900ms 250ms cubic-bezier(0.33, 1, 0.68, 1) both;
+  --animate-drift-in: drift-in 24s ease-in-out infinite alternate;
+  --animate-drift-out: drift-out 31s ease-in-out infinite alternate;
+
+  @keyframes settle {
+    from {
+      transform: translateY(1rem);
+    }
+  }
+
+  @keyframes pop {
+    from {
+      transform: scale(0.92);
+    }
+  }
+
+  @keyframes count {
+    from {
+      --tenths: 0;
+    }
+  }
+
+  @keyframes drift-in {
+    to {
+      transform: translate(0.5rem, 0.5rem);
+    }
+  }
+
+  @keyframes drift-out {
+    to {
+      transform: translate(-0.5rem, -0.5rem);
+    }
+  }
+}
+
+@property --tenths {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@utility v-band-pattern {
+  background-image: url("../assets/bg-pattern-card.svg");
+}
+
+@utility v-count {
+  counter-reset: whole round(down, var(--tenths) / 10);
+
+  &::after {
+    content: counter(whole);
+  }
+}
+
+@utility v-count-decimal {
+  counter-reset: whole round(down, var(--tenths) / 10) tenth
+    mod(var(--tenths), 10);
+
+  &::after {
+    content: counter(whole) "." counter(tenth);
+  }
 }

@@ -22,7 +22,6 @@ export default function PatternTop({ className }: { className?: string }) {
         rx="489"
         ry="488"
         fill="url(#pattern-top-fill)"
-        opacity="0.5"
         transform="rotate(-135 489 489)"
       />
     </svg>

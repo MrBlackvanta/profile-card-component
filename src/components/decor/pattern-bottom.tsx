@@ -22,7 +22,6 @@ export default function PatternBottom({ className }: { className?: string }) {
         rx="489"
         ry="488"
         fill="url(#pattern-bottom-fill)"
-        opacity="0.25"
         transform="scale(1 -1) rotate(45 1669.55 0)"
       />
     </svg>

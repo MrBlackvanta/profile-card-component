@@ -1,14 +1,12 @@
+import { SITE_URL } from "@/data";
 import type { Metadata, Viewport } from "next";
 import { Kumbh_Sans } from "next/font/google";
 import "./globals.css";
 
-const SITE_URL =
-  "https://profile-card-component.abdelrhman-ahmed8881.workers.dev";
-
 const name = "Abdelrhman Abdelaal";
 const title = `${name} | Photos from Cairo`;
 const description =
-  "Abdelrhman Abdelaal, 26, shares photography from Cairo. 1.4K photos, 803K likes and 80K followers on the profile so far.";
+  "Abdelrhman Abdelaal, 27, shares photography from Cairo. 1.4K photos, 803K likes and 80K followers on the profile so far.";
 
 const shareImage = {
   url: "/opengraph-image.jpg",
@@ -58,7 +56,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${kumbhSans.variable} antialiased`}>
-      <body>{children}</body>
+      <body className="bg-page">{children}</body>
     </html>
   );
 }
