@@ -3,4 +3,24 @@
 
 @theme {
   --font-sans: var(--font-kumbh-sans), ui-sans-serif, system-ui, sans-serif;
+
+  --color-page: #19a1ae;
+  --color-card: #ffffff;
+  --color-band: #41cbd3;
+  --color-ink: #2e3349;
+  --color-ink-muted: #6b7082;
+  --color-ink-on-page: #25293c;
+  --color-rule: #e8e9ec;
+
+  --text-body: 1.125rem;
+  --text-body--line-height: 1;
+  --text-meta: 0.875rem;
+  --text-meta--line-height: 1;
+  --text-label: 0.625rem;
+  --text-label--line-height: 1;
+  --text-label--letter-spacing: 0.15em;
+
+  --radius-card: 0.9375rem;
+
+  --shadow-card: 0 50px 100px -20px rgb(8 70 94 / 0.5);
 }
