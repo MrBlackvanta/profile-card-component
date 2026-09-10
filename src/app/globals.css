@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@source not "../../*.md";
+
+@theme {
+  --font-sans: var(--font-kumbh-sans), ui-sans-serif, system-ui, sans-serif;
+}
