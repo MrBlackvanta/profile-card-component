@@ -1,18 +1,16 @@
-import { SITE_URL } from "@/data";
+import { age, profileName, SITE_URL } from "@/data";
 import type { Metadata, Viewport } from "next";
 import { Kumbh_Sans } from "next/font/google";
 import "./globals.css";
 
-const name = "Abdelrhman Abdelaal";
-const title = `${name} | Photos from Cairo`;
-const description =
-  "Abdelrhman Abdelaal, 27, shares photography from Cairo. 1.4K photos, 803K likes and 80K followers on the profile so far.";
+const title = `${profileName} | Photos from Cairo`;
+const description = `${profileName}, ${age}, shares photography from Cairo. 1.4K photos, 803K likes and 80K followers on the profile so far.`;
 
 const shareImage = {
   url: "/opengraph-image.jpg",
   width: 1200,
   height: 630,
-  alt: "Abdelrhman Abdelaal's profile card, with 80K followers, 803K likes and 1.4K photos.",
+  alt: `${profileName}'s profile card, with 80K followers, 803K likes and 1.4K photos.`,
 };
 
 const kumbhSans = Kumbh_Sans({
@@ -30,7 +28,7 @@ export const metadata: Metadata = {
     title,
     description,
     url: "/",
-    siteName: name,
+    siteName: profileName,
     locale: "en_US",
     type: "website",
     images: [shareImage],
